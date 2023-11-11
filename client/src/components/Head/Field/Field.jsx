@@ -14,7 +14,7 @@ const Field = () => {
       const [firstIndex, secondIndex] = flippedIndexes;
       const newCards = [...cards];
 
-      if (newCards[firstIndex].symbol === newCards[secondIndex].symbol) {
+      if (newCards[firstIndex].path === newCards[secondIndex].path) {
         newCards[firstIndex].isMatched = true;
         newCards[secondIndex].isMatched = true;
       }
