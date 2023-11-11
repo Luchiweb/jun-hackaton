@@ -1,11 +1,11 @@
-import Github from './assets/github.svg?react';
+import Homepage from './pages/Homepage';
 
-function App() {
+const App = () => {
   return (
     <>
-      <Github /> Happy Hacking
+      <Homepage />
     </>
   );
-}
+};
 
 export default App;

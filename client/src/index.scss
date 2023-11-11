@@ -1,1 +1,6 @@
+@import './mixins.scss';
 
+body {
+  background: url('./assets/images/background.svg');
+  background-size: cover;
+}
