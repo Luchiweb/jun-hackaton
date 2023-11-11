@@ -10,13 +10,13 @@ const Head = () => {
       <Button
         label="Вход"
         onClick={() => navigate('/login')}
-        height="45px"
+        height="35px"
         width="50%"
       />
       <Button
         label="Регистрация"
         onClick={() => navigate('/register')}
-        height="45px"
+        height="35px"
         width="50%"
       />
     </div>
