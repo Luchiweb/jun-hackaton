@@ -5,25 +5,25 @@ import Button from '../Button/Button';
 const GameInfo = () => {
   return (
     <div className={s.info}>
-      <span>Текущая игра:</span>
+      {/* <span>Текущая игра:</span> */}
       <div className={s.panel}>
-        <div className={s.meta}>
-          <div className={s.time}>
-            Времени осталось: <span>0:45</span>
-          </div>
-          <div className={s.turns}>
-            Ходов сделано: <span>3</span>
-          </div>
-        </div>
         <Button
           label="Начать заново"
           onClick={() => {
             alert('start');
           }}
-          width="200px"
+          width="235px"
           height="45px"
           type="button"
         />
+        <div className={s.meta}>
+          <div className={s.time}>
+            Времени осталось: <span>0:45</span>
+          </div>
+          <div className={s.movesCount}>
+            Ходов сделано: <span>3</span>
+          </div>
+        </div>
       </div>
     </div>
   );

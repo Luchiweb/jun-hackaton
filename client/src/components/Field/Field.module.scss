@@ -1,6 +1,8 @@
 @import '../../mixins.scss';
 
 .field {
+  max-width: 515px;
+  margin: 0 auto;
   display: flex;
   column-gap: 15px;
   row-gap: 15px;
