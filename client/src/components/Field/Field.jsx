@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import s from './Field.module.scss';
-import Card from '../../Card/Card';
-import { generateCards } from '../../../helpers/cards';
+import Card from '../Card/Card';
+import { generateCards } from '../../helpers/cards';
 
 const Field = () => {
-
   const [cards, setCards] = useState(generateCards());
   const [flippedCount, setFlippedCount] = useState(0);
   const [flippedIndexes, setFlippedIndexes] = useState([]);
@@ -31,7 +30,11 @@ const Field = () => {
   }, [flippedCount, flippedIndexes, cards]);
 
   const handleCardClick = (index) => {
-    if (flippedCount < 2 && !cards[index].isFlipped && !cards[index].isMatched) {
+    if (
+      flippedCount < 2 &&
+      !cards[index].isFlipped &&
+      !cards[index].isMatched
+    ) {
       const newCards = [...cards];
       newCards[index].isFlipped = true;
 
@@ -44,7 +47,11 @@ const Field = () => {
   return (
     <div className={s.field}>
       {cards.map((card, index) => (
-        <Card key={index} card={card} onCardClick={() => handleCardClick(index)} />
+        <Card
+          key={index}
+          card={card}
+          onCardClick={() => handleCardClick(index)}
+        />
       ))}
     </div>
   );

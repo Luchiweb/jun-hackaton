@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Head.module.scss';
-import Button from './Button/Button';
+import Button from '../Button/Button';
 import { useNavigate } from 'react-router-dom';
 
 const Head = () => {
