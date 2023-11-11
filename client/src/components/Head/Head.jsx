@@ -1,19 +1,21 @@
 import React from 'react';
 import s from './Head.module.scss';
 import Button from './Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Head = () => {
+  const navigate = useNavigate();
   return (
     <div className={s.head}>
       <Button
         label="Вход"
-        onClick={() => alert('nav to login')}
+        onClick={() => navigate('/login')}
         height="45px"
         width="50%"
       />
       <Button
         label="Регистрация"
-        onClick={() => alert('nav to register')}
+        onClick={() => navigate('/register')}
         height="45px"
         width="50%"
       />

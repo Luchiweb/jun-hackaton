@@ -1,9 +1,7 @@
-@import '../mixins.scss';
+@import '../../mixins.scss';
 
-main {
+.page404 {
   width: 100%;
-  max-width: 475px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
