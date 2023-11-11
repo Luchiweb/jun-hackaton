@@ -52,3 +52,42 @@
     font-weight: 700;
   }
 }
+
+.textInput {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid $dark;
+  background-color: $white;
+  font-weight: 500;
+  border-radius: 8px;
+  outline: none;
+  color: $dark;
+  font-size: 22px;
+  font-family: 'Nunito';
+  &:focus {
+    outline-color: $dark;
+  }
+  &:active {
+    outline-color: $dark;
+  }
+  &::placeholder {
+    font-weight: 300;
+    color: $dark;
+    font-size: 26px;
+    font-family: 'Nunito';
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 20px;
+  & input {
+    width: 100%;
+  }
+}
+
+button:disabled {
+  opacity: 0.5;
+}
