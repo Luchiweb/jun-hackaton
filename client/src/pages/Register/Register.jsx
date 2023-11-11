@@ -3,7 +3,7 @@ import s from './Register.module.scss';
 import { Formik, Form, Field } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import SignUpSchema from '../../utils/SignUpSchema';
-import Button from '../../components/Head/Button/Button';
+import Button from '../../components/Button/Button';
 
 const Register = () => {
   const [isFetching, setIsFetching] = useState(false);

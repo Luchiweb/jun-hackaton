@@ -1,8 +1,8 @@
 @import '../../mixins.scss';
 
 .card {
-  width: 150px;
-  height: 150px;
+  width: 90px;
+  height: 90px;
   border-radius: 10px;
   border: 1px solid #e8c4ba;
   background: #f0cec5;
@@ -18,5 +18,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.01s ease-in;
+  }
+}
+.flipped {
+  transform: rotateY(180deg);
+  img {
+    transform: rotateY(-180deg);
   }
 }
