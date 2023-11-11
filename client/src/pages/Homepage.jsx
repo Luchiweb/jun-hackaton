@@ -1,11 +1,14 @@
 import React from 'react';
 import s from './Homepage.module.scss';
+import Head from '../components/Head/Head';
+import Field from '../components/Head/Field/Field';
 
 const Homepage = () => {
   return (
-    <>
-      <h1 className={s.green}>Hello World</h1>
-    </>
+    <main>
+      <Head />
+      <Field />
+    </main>
   );
 };
 

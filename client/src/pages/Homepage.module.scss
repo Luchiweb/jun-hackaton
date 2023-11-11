@@ -1,6 +1,10 @@
 @import '../mixins.scss';
 
-.green {
-  color: $text;
-  text-align: center;
+main {
+  width: 100%;
+  max-width: 475px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }

@@ -1,5 +1,15 @@
 @import './mixins.scss';
 
+* {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   background: url('./assets/images/background.svg');
   background-size: cover;
