@@ -1,0 +1,8 @@
+@import '../../mixins.scss';
+
+.homepage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
