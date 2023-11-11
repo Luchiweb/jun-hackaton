@@ -1,0 +1,59 @@
+@import '../../mixins.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.record {
+  display: flex;
+  justify-content: space-between;
+  background-color: $dark;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.25) inset;
+  color: $text;
+  width: 100%;
+
+  & span {
+    font-weight: 600;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  cursor: default;
+  color: $text;
+  overflow: hidden;
+
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid $dark;
+  }
+
+  th {
+    background-color: $dark;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.25) inset;
+    color: $white;
+  }
+
+  tr {
+    background-color: $light;
+  }
+
+  tr:nth-child(even) {
+    background-color: $light;
+  }
+}
+
+h2 {
+  color: $text;
+  margin-bottom: 10px;
+}
