@@ -1,1 +1,35 @@
+@import './mixins.scss';
 
+* {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('./assets/images/background.svg');
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  overflow-y: scroll;
+  #root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  main {
+    max-width: 675px;
+    margin: 0 auto;
+    height: 100%;
+  }
+}
