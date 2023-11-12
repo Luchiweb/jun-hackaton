@@ -40,7 +40,7 @@ const Game = () => {
           setGameOver(true);
           setShowModal(true);
         }
-      }, 1300);
+      }, 1100);
     }
   }, [flippedCount, flippedIndexes, cards]);
 

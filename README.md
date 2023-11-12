@@ -34,3 +34,10 @@
 
 **Backend:** Java, Spring Boot
 
+
+## Demo
+
+https://memorygamebyteam41.onrender.com/
+
+К сожалению, render.com крайне медленно работает с изображениями 😥
+
