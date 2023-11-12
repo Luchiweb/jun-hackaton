@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './Homepage.module.scss';
-import Head from '../../components/Head/Head';
 import Field from '../../components/Field/Field';
 import GameInfo from '../../components/GameInfo/GameInfo';
 import Leaderboard from '../../components/Leaderboard/Leaderboard';
