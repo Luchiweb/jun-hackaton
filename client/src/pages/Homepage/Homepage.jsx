@@ -1,10 +1,7 @@
 import React from 'react';
-
-// import Head from '../../components/Head/Head';
 import Game from '../../components/Game/Game';
-import Leaderboard from '../../components/Leaderboard/Leaderboard';
-
 import s from './Homepage.module.scss';
+import Leaderboard from '../../components/Leaderboard/Leaderboard';
 
 const Homepage = () => {
   return (
