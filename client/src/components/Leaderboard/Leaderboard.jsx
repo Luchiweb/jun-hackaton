@@ -21,7 +21,8 @@ const Leaderboard = () => {
   // ];
 
   const [leaderList, setLeaderList] = useState([]);
-  const [isLeaderListLoading, setIsLeaderListLoading] = useState(false);
+  //const [isLeaderListLoading, setIsLeaderListLoading] = useState(false);
+  const [isLeaderListLoading, setIsLeaderListLoading] = useState(true);
   const [leaderListLoadingError, setLeaderListLoadingError] = useState(null);
 
   useEffect(() => {
@@ -30,7 +31,7 @@ const Leaderboard = () => {
       try {
         const res = await fetch(`/api/bestScores`, {
           method: 'GET',
-          credentials: 'include',
+          credentials: 'same-origin',
           headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
@@ -60,32 +61,36 @@ const Leaderboard = () => {
   );
 
   return (
-    <div className={s.container}>
-      <div className={s.leaderboard}>
-        <h2>Топ игроки</h2>
-        <div className={s.tableWrapper}>
-          <table>
-            <thead>
-              <tr>
-                <th>Никнейм</th>
-                <th>Ходы</th>
-              </tr>
-            </thead>
-            <tbody>
-              {leaderList.map((record, index) => (
-                <tr key={index}>
-                  <td>{record.username}</td>
-                  <td>{record.movesCount}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+    <>
+      {!isLeaderListLoading && !leaderListLoadingError && (
+        <div className={s.container}>
+          <div className={s.leaderboard}>
+            <h2>Топ игроки</h2>
+            <div className={s.tableWrapper}>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Никнейм</th>
+                    <th>Ходы</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {leaderList.map((record, index) => (
+                    <tr key={index}>
+                      <td>{record.username}</td>
+                      <td>{record.movesCount}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {leaderListLoadingError && (
+              <span className={s.error}>Ошибка получения данных с сервера</span>
+            )}
+          </div>
         </div>
-        {leaderListLoadingError && (
-          <span className={s.error}>Ошибка получения данных с сервера</span>
-        )}
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
