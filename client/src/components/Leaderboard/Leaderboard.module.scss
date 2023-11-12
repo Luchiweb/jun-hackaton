@@ -14,11 +14,15 @@
       font-size: 32px;
       line-height: 75px;
     }
+    .error {
+      font-size: 20px;
+      color: $red;
+    }
     .tableWrapper {
-      height: 515px;
+      max-height: 515px;
       overflow-y: auto;
       border-radius: 15px 0 0 15px;
-
+      overflow-y: scroll;
       &::-webkit-scrollbar {
         -webkit-appearance: none;
       }
@@ -38,7 +42,6 @@
         background-color: $dark;
         border-radius: 0 15px 15px 0;
       }
-
       table {
         width: 100%;
         border-collapse: collapse;
