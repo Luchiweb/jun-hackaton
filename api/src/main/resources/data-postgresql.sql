@@ -1,0 +1,3 @@
+-- INSERT INTO humans (user)
+-- VALUES  ('yulia'),
+--         ('katya');
