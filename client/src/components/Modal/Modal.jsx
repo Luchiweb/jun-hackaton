@@ -25,7 +25,7 @@ const Modal = ({ closeModal, moves, timer, restartGame }) => {
             Ходы: <span>{moves}</span>
           </p>
           <p>
-            Время: <span>{timer}s</span>
+            Время: <span>{timer}сек</span>
           </p>
         </div>
         <div>
@@ -40,7 +40,7 @@ const Modal = ({ closeModal, moves, timer, restartGame }) => {
             />
             <Button
               label="Сохранить"
-              height="35px"
+              height="42px"
               width="30%"
               onClick={saveResult}
               disabled={isSaved}
@@ -49,7 +49,7 @@ const Modal = ({ closeModal, moves, timer, restartGame }) => {
         </div>
         <Button
           label="Играть снова!"
-          height="35px"
+          height="42px"
           width="100%"
           onClick={restartGame}
         />
