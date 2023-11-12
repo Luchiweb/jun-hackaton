@@ -23,6 +23,15 @@
   text-align: center;
   position: relative;
   max-width: 600px;
+  @include xs {
+    max-width: 280px;
+  }
+  @include sm {
+    max-width: 320px;
+  }
+  @include smd {
+    max-width: 480px;
+  }
 
   & img {
     width: 100%;
@@ -43,8 +52,9 @@
 .info {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   gap: 10px;
-  font-size: 16px;
+  font-size: 22px;
   font-family: 'Nunito';
   color: $text;
 
@@ -78,6 +88,18 @@
   }
 }
 
+h2 {
+  @include xs {
+    font-size: 18px;
+  }
+  @include sm {
+    font-size: 20px;
+  }
+  @include smd {
+    font-size: 22px;
+  }
+}
+
 .form {
   display: flex;
   align-items: center;
@@ -85,6 +107,46 @@
   gap: 20px;
   & input {
     width: 100%;
+  }
+
+  button {
+    min-width: 170px;
+  }
+
+  @include xs {
+    display: flex;
+    flex-direction: column;
+    input {
+      width: 100%;
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+    button {
+      width: 100% !important;
+    }
+  }
+
+  @include sm {
+    display: flex;
+    flex-direction: column;
+    input {
+      width: 100%;
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+    button {
+      width: 100% !important;
+    }
+  }
+
+  @include smd {
+    input {
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
   }
 }
 
