@@ -23,16 +23,7 @@ export default defineConfig(({ mode }) => {
       Unfonts({
         google: {
           preconnect: true,
-          /**
-           * values: auto, block, swap(default), fallback, optional
-           * default: 'swap'
-           */
           display: 'swap',
-          /**
-           * define where the font load tags should be inserted
-           * default: 'head-prepend'
-           *   values: 'head' | 'body' | 'head-prepend' | 'body-prepend'
-           */
           injectTo: 'head-prepend',
           families: [
             {

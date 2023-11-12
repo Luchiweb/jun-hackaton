@@ -31,7 +31,7 @@ const Leaderboard = () => {
       try {
         const res = await fetch(`/api/bestScores`, {
           method: 'GET',
-          credentials: 'same-origin',
+          credentials: 'include',
           headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
