@@ -2,7 +2,14 @@ import React, { useEffect } from 'react';
 import s from './GameInfo.module.scss';
 import Button from '../Button/Button';
 
-const GameInfo = ({ moves, restartGame, gameOver, timer, setTimer }) => {
+const GameInfo = ({
+  moves,
+  restartGame,
+  gameOver,
+  timer,
+  setTimer,
+  gameStarted,
+}) => {
   useEffect(() => {
     let intervalId;
 
@@ -13,27 +20,40 @@ const GameInfo = ({ moves, restartGame, gameOver, timer, setTimer }) => {
     }
 
     return () => clearInterval(intervalId);
-
   }, [gameOver]);
 
   return (
     <div className={s.info}>
       <div className={s.panel}>
-        <Button
-          label="Начать заново"
-          onClick={restartGame}
-          width="235px"
-          height="45px"
-          type="button"
-        />
-        <div className={s.meta}>
-          <div className={s.time}>
-            Времея игры: <span>{timer}s</span>
-          </div>
-          <div className={s.movesCount}>
-            Ходов сделано: <span>{moves}</span>
-          </div>
-        </div>
+        {!gameStarted ? (
+          <>
+            <Button
+              label="Начать игру"
+              onClick={restartGame}
+              width="100%"
+              height="45px"
+              type="button"
+            />
+          </>
+        ) : (
+          <>
+            <Button
+              label="Начать заново"
+              onClick={restartGame}
+              width="235px"
+              height="45px"
+              type="button"
+            />
+            <div className={s.meta}>
+              <div className={s.time}>
+                Времея игры: <span>{timer}s</span>
+              </div>
+              <div className={s.movesCount}>
+                Ходов сделано: <span>{moves}</span>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
