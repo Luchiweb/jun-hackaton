@@ -1,0 +1,76 @@
+@import '../../mixins.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 515px;
+  .leaderboard {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    h2 {
+      color: $text;
+      font-size: 32px;
+      line-height: 75px;
+    }
+    .error {
+      font-size: 20px;
+      color: $red;
+    }
+    .tableWrapper {
+      max-height: 515px;
+      overflow-y: auto;
+      border-radius: 15px 0 0 15px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+      }
+      &::-webkit-scrollbar:vertical {
+        width: 8px;
+      }
+      &::-webkit-scrollbar:horizontal {
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        //  border-radius: 6px;
+        border-radius: 0 15px 15px 0;
+        border: 1px solid $dark;
+        background-color: $light;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: $dark;
+        border-radius: 0 15px 15px 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 15px 0 0 15px;
+        cursor: default;
+        color: $text;
+        overflow: hidden;
+
+        th,
+        td {
+          padding: 12px;
+          border: 1px solid $dark;
+          text-align: center;
+        }
+
+        th {
+          background-color: $dark;
+          box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.25) inset;
+          color: $white;
+        }
+
+        tr {
+          background-color: $light;
+        }
+
+        tr:nth-child(even) {
+          background-color: $light;
+        }
+      }
+    }
+  }
+}
