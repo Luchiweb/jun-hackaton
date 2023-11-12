@@ -32,13 +32,13 @@
 
 1. Клонируйте репозиторий на локальную машину:
 
-   ```bash
+```bash
    git clone https://github.com/Luchiweb/jun-hackaton.git
    ```
 
 2. Перейдите в директорию проекта:
 
-  ```bash
+```bash
    cd jun-hackaton/client
    ```   
 
@@ -50,7 +50,7 @@
 
 4. Запустите приложение с помощью Vite:
    
-   ```bash
+```bash
    npm run dev
    ```
 
