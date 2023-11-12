@@ -5,6 +5,12 @@
   flex-direction: column;
   text-align: center;
   width: 515px;
+  @include xl {
+    width: 450px;
+  }
+  @media (max-width: $screen-smd-max) {
+    width: 100%;
+  }
   .leaderboard {
     display: flex;
     flex-direction: column;
