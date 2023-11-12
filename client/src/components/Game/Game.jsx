@@ -78,8 +78,8 @@ const Game = () => {
 
     return (
         <div>
-            <Field cards={cards} handleCardClick={handleCardClick} />
             <GameInfo moves={moves} timer={timer} setTimer={setTimer} restartGame={restartGame} gameOver={gameOver} />
+            <Field cards={cards} handleCardClick={handleCardClick} />
             {showModal && <Modal closeModal={closeModal} moves={moves} timer={timer} restartGame={restartGame} />}
         </div>
     );

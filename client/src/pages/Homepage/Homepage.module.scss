@@ -3,6 +3,12 @@
 .homepage {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  row-gap: 15px;
+  align-items: flex-start;
+  justify-content: center;
+  column-gap: 35px;
+  .game {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
 }

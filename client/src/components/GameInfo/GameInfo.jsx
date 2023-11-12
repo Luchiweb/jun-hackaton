@@ -18,23 +18,22 @@ const GameInfo = ({ moves, restartGame, gameOver, timer, setTimer }) => {
 
   return (
     <div className={s.info}>
-      <span>Текущая игра:</span>
       <div className={s.panel}>
+        <Button
+          label="Начать заново"
+          onClick={restartGame}
+          width="235px"
+          height="45px"
+          type="button"
+        />
         <div className={s.meta}>
           <div className={s.time}>
             Времея игры: <span>{timer}s</span>
           </div>
-          <div className={s.turns}>
+          <div className={s.movesCount}>
             Ходов сделано: <span>{moves}</span>
           </div>
         </div>
-        <Button
-          label="Начать заново"
-          onClick={restartGame}
-          width="200px"
-          height="45px"
-          type="button"
-        />
       </div>
     </div>
   );
