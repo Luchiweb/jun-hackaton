@@ -49,6 +49,10 @@ const Game = () => {
       return;
     }
 
+    if (!gameStarted) {
+      return;
+    }
+
     if (
       flippedCount < 2 &&
       !cards[index].isFlipped &&
